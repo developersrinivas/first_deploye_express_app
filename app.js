@@ -10,4 +10,5 @@ app.use(express.json()); // Middleware to parse JSON
 app.use('/users', userRoutes); // User routes
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(3000, '0.0.0.0')
+// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
