@@ -1,9 +1,11 @@
 import express from 'express';
-import { getUsers, createUser } from '../controllers/controllersUser.js';
+import { getUsers, createUser,greetMessage,registersList } from '../controllers/controllersUser.js';
 
 const router = express.Router();
 
-router.get('/', getUsers); // Fetch all users
-router.post('/post', createUser); // Add a new user
+router.get('/users', getUsers); // Fetch all users
+router.post('/registers', createUser); // Add a new user
+router.get('/',greetMessage); // Fetch all users
+router.get('/usersList', registersList); // Fetch all users
 
 export default router;
